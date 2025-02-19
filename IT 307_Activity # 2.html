@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT 307 | Activity # 1</title>
+    <link rel="stylesheet" href="it307act2.css">
+
+    <link href='https:/fonts.googleapis.com/css?family=Big Shoulders Text' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="background">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="background-wuwa.mp4" type="video/mp4">
+        </video>
+        <div class="fade-overlay"></div>
+    </div>
+
+    <nav>
+        <div class="logo-container">
+            <img src="wuwa-logo.png" alt="Logo" class="logo">
+            <div class="name">Mark Louie Matus</div>
+        </div>
+        <ul>
+            <li><p>Home</p></li>
+            <li><a href="#about-me"><p>About</p></a></li>
+            <li><p>Portfolio</p></li>
+            <li><p>Contact</p></li>
+            <li><p>Activity # 2</p></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <img src="rinascita-logo.jpg" alt="Rinascita Logo" class="rinascita-logo">
+        <div class="character">
+            <img src="me.jpg" alt="me">
+        </div>
+        
+        <div class="description">
+            <link href='https://fonts.googleapis.com/css?family=Kdam Thmor Pro' rel='stylesheet'>
+            <h1>I'm a work in progress, please be patient.</h1>
+            <p>- 01001101</p>
+            <div class="buttons">
+                <button class="accept">Accept</button>
+                <button class="decline">Decline</button>
+            </div>
+            <div>
+                <h2 class="description-h2">01110100 01101000 01100101 00100000 01100111 01100001 01101101 01100101</h2>
+            </div>
+        </div>
+    </div>
+    
+    <img src="rinascita-landscape.jpg" alt="Rinascita Landscape" class="black-section-image">
+    <div class="rectangle" id="about-me">
+        <h2 class="rectangle-title">About Me</h2>
+        <p class="rectangle-text">
+        My name is Mark Louie Matus. I'm currently a third-year BSIT student at World Citi Colleges.
+        I'd describe myself as a fast learner and someone who gets along well with others.
+        When I'm not studying, you can usually find me playing games or catching up on the latest anime.
+        </p>
+    </div>
+    <div class="black-section">
+        <div class="fade-overlay-2"></div>
+    </div>
+
+    <script>
+    window.addEventListener('scroll', function () {
+    const image = document.querySelector('.black-section-image');
+    const rectangle = document.querySelector('.rectangle');
+
+    if (!image || !rectangle) return;
+
+    const imagePosition = image.getBoundingClientRect().top;
+    const rectanglePosition = rectangle.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (imagePosition < windowHeight && imagePosition > 0) {
+        image.classList.add('show-image');
+        image.classList.remove('hide-image');
+    } else {
+        image.classList.add('hide-image');
+        image.classList.remove('show-image');
+    }
+
+    if (rectanglePosition < windowHeight && rectanglePosition > 0) {
+        rectangle.classList.add('show-rectangle');
+        rectangle.classList.remove('hide-rectangle');
+    } else {
+        rectangle.classList.add('hide-rectangle');
+        rectangle.classList.remove('show-rectangle');
+    }
+});
+    </script>
+</body>
+</html>
