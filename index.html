@@ -13,23 +13,6 @@
     <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
 </head>
 
-    <!-- Floating Window Script -->
-    <script>
-        function openModal() {
-            document.getElementById("aboutModal").style.display = "block";
-        }
-    
-        function closeModal() {
-            document.getElementById("aboutModal").style.display = "none";
-        }
-    
-        // Close modal when clicking outside the modal content
-        window.onclick = function(event) {
-            var modal = document.getElementById("aboutModal");
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
     </script>
 
 <body>
@@ -70,18 +53,18 @@
             <!-- Description Section -->
             <div class="description">
                 <link href='https://fonts.googleapis.com/css?family=Kdam Thmor Pro' rel='stylesheet'>
-                <h1>I'm a work in progress, please be patient.</h1>
-                <p>- 01001101</p>
+                <h1>Great software isn’t just built—it’s engineered with precision, creativity, and purpose.</h1>
+                <p>Explore my work.</p>
                 
                 <!-- Action Buttons -->
                 <div class="buttons">
-                    <button class="accept">Accept</button>
-                    <button class="decline">Decline</button>
+                    <button class="Resume">Resume</button>
+                    <button class="Achievements">Achievements</button>
                 </div>
-                
-                <!-- Binary Text Section -->
-                <div>
-                    <h2 class="description-h2">01110100 01101000 01100101 00100000 01100111 01100001 01101101 01100101</h2>
+
+                <div class="popup">
+                    <p>Come back later to check out my achievements!</p>
+                    <button class="ok-btn">Okay</button>
                 </div>
             </div>
         </div>
@@ -94,9 +77,9 @@
             <div id="aboutMe" class="about-me-section hidden right">
                 <div class="about-me-content">
                     <h2 id="aboutMeTitle">About Me</h2>
-                    <p>My name is Mark Louie Matus. I'm currently a third-year BSIT student at World Citi Colleges.</p>
-                    <p>I'd describe myself as a fast learner and someone who gets along well with others.</p>
-                    <p>When I'm not studying, you can usually find me playing games or catching up on the latest anime.</p>
+                    <p>My name is Mark Louie Matus. I'm currently a third-year BSIT student at World Citi Colleges.
+                    I'd describe myself as a fast learner and someone who gets along well with others.When I'm not 
+                    studying, you can usually find me playing games or catching up on the latest anime.</p>
                 </div>
             </div>
         </div>
@@ -132,6 +115,24 @@
         </div> 
     </footer>
 
+    <!-- Script for Resume Button -->
+    <script>
+        document.querySelector(".Resume").addEventListener("click", function() {
+            window.location.href = "Resume.pdf";
+        });
+    </script>
+    <!-- Script for Achievements Button -->
+    <script>
+        document.querySelector(".Achievements").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "block";
+        });
+
+        document.querySelector(".ok-btn").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "none";
+        });
+    </script>
+
+    <!-- Script for Reveal Animation -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const aboutMeSection = document.querySelectorAll(".hidden");

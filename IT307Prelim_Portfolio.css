@@ -148,7 +148,7 @@ nav ul li p {
 .container {
     position: relative;
     z-index: 1;
-    margin-top: 20vh;
+    margin-top: 25vh;
 }
 
 /* ========== ANIMATION FOR ELEMENTS ========== */
@@ -215,25 +215,16 @@ nav ul li p {
 .description h1 {
     font-family: 'Kdam Thmor Pro';
     font-size: 45px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 0;
-}
-
-.description-h2 {
-    max-width: 500px;
-    font-family: 'Kdam Thmor Pro';
-    font-size: 23px;
-    color: #595959;
-    text-align: left;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    opacity: 65%;
+    line-height: 1.2;
 }
 
 .description p {
     font-family: 'Kdam Thmor Pro';
     font-size: 28px;
-    color: white;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -244,7 +235,7 @@ nav ul li p {
     margin-top: 20px;
 }
 
-.accept {
+.Resume {
     background-color: #000000;
     color: rgb(255, 255, 255);
     padding: 10px 20px;
@@ -253,7 +244,7 @@ nav ul li p {
     font-size: 16px;
 }
 
-.decline {
+.Achievements {
     background: transparent;
     border: 2px solid #000000;
     padding: 10px 20px;
@@ -262,6 +253,50 @@ nav ul li p {
     color: #000000;
 }
 
+/* Pop-up container */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pop-up header */
+.popup h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Pop-up text */
+.popup p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* 'Okay' button */
+.popup .ok-btn {
+    background: #004aad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.popup .ok-btn:hover {
+    background: #002f6c;
+}
 
 /* ========== ABOUT ME SECTION BELOW ========== */
 .about-me-container {
