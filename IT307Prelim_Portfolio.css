@@ -22,13 +22,6 @@ nav {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 10px;
-    }
-}
-
 /* ========== LOGO CONTAINER ========== */
 .logo-container {
     position: absolute;
@@ -52,41 +45,6 @@ nav {
     color: white;
 }
 
-@media (max-width: 768px) {
-    .logo {
-        width: 60px; 
-        margin-top: 10px;
-    }
-
-    .name {
-        font-size: 16px;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 425px) {
-    .logo {
-        width: 50px;
-        margin-top: 10px;
-    }
-
-    .name {
-        font-size: 14px;
-        margin-top: 10px;
-    }
-}
-
-@keyframes slide {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* ========== RINASCITA LOGO ========== */
 .rinascita-logo {
     position: absolute;
@@ -96,61 +54,6 @@ nav {
     width: 100px;
     height: auto;
     z-index: 2;
-}
-
-/* Tablets (Medium Screens) */
-@media screen and (max-width: 1024px) {
-    .rinascita-logo {
-        left: 9%;
-        top: 15%;
-        width: 80px;
-    }
-}
-
-/* Smartphones (Small Screens) */
-@media screen and (max-width: 768px) {
-    .rinascita-logo {
-        left: 7%;
-        top: 14%;
-        width: 70px;
-    }
-}
-
-/* Extra Small Devices (Very Small Screens) */
-@media screen and (max-width: 480px) {
-    .rinascita-logo {
-        left: 5%;
-        top: 12%;
-        width: 60px;
-    }
-}
-
-/* Tablets (Medium Screens) */
-@media screen and (max-width: 1024px) {
-    .rinascita-logo {
-        left: 10%;
-    }
-}
-
-/* Smartphones (Small Screens) */
-@media screen and (max-width: 768px) {
-    .rinascita-logo {
-        left: 5%;
-    }
-}
-
-/* Extra Small Devices (Very Small Screens) */
-@media screen and (max-width: 480px) {
-    .rinascita-logo {
-        left: 3%;
-    }
-}
-
-/* Ultra Small Devices (320px and below) */
-@media screen and (max-width: 320px) {
-    .rinascita-logo {
-        left: 2%;
-    }
 }
 
 /* ========== NAVIGATION LINKS ========== */
@@ -199,59 +102,6 @@ nav ul li p {
     animation: fadeSlide 2s ease-in-out forwards;
 }
 
-@keyframes fadeSlide {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ========== NAV LINK MOBILE RESPONSIVENESS ========== */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; 
-        align-items: center;
-        gap: 2px; 
-        position: absolute;
-        top: 70px;
-        right: 10px;
-        background: rgba(86, 86, 86, 0.6);
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-
-    nav ul li p,
-    nav ul li:last-child p {
-        font-size: 16px; 
-        padding: 5px 12px; 
-        margin-top: -10px; 
-        margin-bottom: 12px; 
-        position: relative;
-        left: -10px; 
-    }
-}
-
-@media (max-width: 425px) {
-    nav ul {
-        right: 10px; 
-        top: 50px; 
-        padding: 8px 15px;
-    }
-
-    nav ul li p,
-    nav ul li:last-child p {
-        font-size: 14px; 
-        padding: 5px 10px; 
-        margin-top: -10px; 
-        margin-bottom: 12px; 
-        left: -10px; 
-    }
-}
-
 /* ========== BACKGROUND STYLES ========== */
 .background {
     position: fixed; 
@@ -275,15 +125,6 @@ nav ul li p {
     min-height: 100%;
 }
 
-@media (max-width: 425px) {
-    .background-video {
-        width: 110vw; 
-        height: 110vh;
-        left: 50%;
-        right: 50%;
-    }
-}
-
 .fade-overlay {
     position: fixed;
     top: 0;
@@ -293,18 +134,6 @@ nav ul li p {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     pointer-events: none;
     z-index: 1;
-}
-
-@media (max-width: 768px) {
-    .fade-overlay-2 {
-        height: 80px; 
-    }
-}
-
-@media (max-width: 480px) {
-    .fade-overlay-2 {
-        height: 60px; 
-    }
 }
 
 /* ========== MAIN CONTAINER ========== */
@@ -343,28 +172,6 @@ nav ul li p {
     animation-delay: 0.6s;
 }
 
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes descriptionSlide {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 /* ========== CHARACTER IMAGE STYLES ========== */
 .character {
     position: absolute;
@@ -393,97 +200,6 @@ nav ul li p {
     border-radius: 100px;
     border: 5px solid #000000A6;
     animation: borderAnimation 5s infinite alternate ease-in-out;
-}
-
-@keyframes borderAnimation {
-    0% {
-        border-color: #000000A6;
-        box-shadow: 0 0 10px #000000A6;
-    }
-    20% {
-        border-color: #474747a6;
-        box-shadow: 0 0 20px #474747a6;
-    }
-    40% {
-        border-color: #9b9b9ba6;
-        box-shadow: 0 0 20px #9b9b9ba6;
-    }
-    60% {
-        border-color: #9b9b9ba6;
-        box-shadow: 0 0 20px #9b9b9ba6;
-    }
-    80% {
-        border-color: #474747a6;
-        box-shadow: 0 0 20px #474747a6;
-    }
-    100% {
-        border-color: #000000A6;
-        box-shadow: 0 0 10px #000000A6;
-    }
-}
-
-/* Tablets (Medium Screens) */
-@media screen and (max-width: 1024px) {
-    .character {
-        left: 10%;
-        width: 25vw;
-    }
-
-    .character img {
-        border-radius: 50px;
-        border-width: 4px;
-        position: absolute;
-        margin-left: 10px;
-        margin-top: -450px;
-    }
-}
-
-/* Smartphones (Small Screens) */
-@media screen and (max-width: 768px) {
-    .character {
-        left: 5%;
-        width: 30vw;
-    }
-    
-    .character img {
-        border-radius: 40px;
-        border-width: 4px;
-        position: absolute;
-        margin-left: 15px;
-        margin-top: -400px;
-    }
-}
-
-/* Extra Small Devices (Very Small Screens) */
-@media screen and (max-width: 480px) {
-    .character {
-        left: 3%;
-        width: 40vw;
-    }
-    
-    .character img {
-        border-radius: 30px;
-        border-width: 3px;
-        position: absolute;
-        margin-left: 15px;
-        margin-top: -320px;
-    }
-}
-
-/* Ultra Small Devices (320px and below) */
-@media screen and (max-width: 320px) {
-    .character {
-        left: 2%;
-        width: 45vw;
-    }
-    
-    .character img {
-        border-radius: 25px;
-        border-width: 2px;
-        position: absolute;
-        margin-left: 15px;
-        margin-top: -380px;
-    }
 }
 
 /* ========== DESCRIPTION SECTION ========== */
@@ -581,28 +297,6 @@ nav ul li p {
     animation: aboutMeLeftReverse 2s ease-in forwards;
 }
 
-@keyframes aboutMeLeft {
-    from {
-        opacity: 0;
-        transform: translateX(100px); 
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes aboutMeLeftReverse {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-}
-
 /* ========== ABOUT ME ========== */
 .rectangle {
     position: absolute;
@@ -633,28 +327,6 @@ nav ul li p {
     animation: aboutMeRightReverse 2s ease-in forwards;
 }
 
-@keyframes aboutMeRight {
-    from {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes aboutMeRightReverse {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-}
-
 /* ========== ABOUT ME DESCRIPTION ========== */
 .rectangle-title {
     font-size: 28px;
@@ -671,4 +343,36 @@ nav ul li p {
     line-height: 1.5;
 }
 
+/* ========== CONTACT INFO ========== */
+.contact-section {
+    position: relative;
+    z-index: 3;
+    background-color: black;
+    text-align: center;
+    padding: 50px 20px;
+    width: 100%;
+    bottom: 0;
+}
 
+.contact-title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-text {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}

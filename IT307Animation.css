@@ -1,0 +1,121 @@
+/* ========== LOGO CONTAINER ========== */
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== NAVIGATION LINK TEXT ========== */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== ANIMATION FOR ELEMENTS ========== */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes descriptionSlide {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========== CHARACTER IMAGE STYLES ========== */
+@keyframes borderAnimation {
+    0% {
+        border-color: #000000A6;
+        box-shadow: 0 0 10px #000000A6;
+    }
+    20% {
+        border-color: #474747a6;
+        box-shadow: 0 0 20px #474747a6;
+    }
+    40% {
+        border-color: #9b9b9ba6;
+        box-shadow: 0 0 20px #9b9b9ba6;
+    }
+    60% {
+        border-color: #9b9b9ba6;
+        box-shadow: 0 0 20px #9b9b9ba6;
+    }
+    80% {
+        border-color: #474747a6;
+        box-shadow: 0 0 20px #474747a6;
+    }
+    100% {
+        border-color: #000000A6;
+        box-shadow: 0 0 10px #000000A6;
+    }
+}
+
+/* ========== BLACK SECTION FOR STYLING PURPOSE ========== */
+@keyframes aboutMeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aboutMeLeftReverse {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+/* ========== ABOUT ME ========== */
+@keyframes aboutMeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aboutMeRightReverse {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
