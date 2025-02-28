@@ -13,88 +13,90 @@
     <link href='https:/fonts.googleapis.com/css?family=Big Shoulders Text' rel='stylesheet'>
 </head>
 
+    <!-- Floating Window Script -->
+    <script>
+        function openModal() {
+            document.getElementById("aboutModal").style.display = "block";
+        }
+    
+        function closeModal() {
+            document.getElementById("aboutModal").style.display = "none";
+        }
+    
+        // Close modal when clicking outside the modal content
+        window.onclick = function(event) {
+            var modal = document.getElementById("aboutModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 <body>
-    <!-- Background Video Section -->
-    <div class="background">
-        <video autoplay loop muted playsinline class="background-video">
-            <source src="background-wuwa.mp4" type="video/mp4">
-        </video>
-        <div class="fade-overlay"></div> <!-- Fading effect overlay on video -->
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo-container">
-            <img src="wuwa-logo.png" alt="Logo" class="logo">
-            <div class="name">Mark Louie Matus</div>
-        </div>
-        <ul>
-            <li><p onclick="location.reload()">Home</p></li>
-            <li><a href="#about-me"><p>About</p></a></li>
-            <li><a href="https://github.com/zayddtrevor/matus_myportfolioIT307" target="_blank"><p>Portfolio</p></a></li>
-            <li><p>Contact</p></li>
-            <li><p>PRELIM</p></li>
-        </ul>
-    </nav>
-
-    <!-- Main Content Container -->
-    <div class="container">
-        <img src="rinascita-logo.jpg" alt="Rinascita Logo" class="rinascita-logo">
-        
-        <!-- Profile Image Section -->
-        <div class="character">
-            <img src="me.jpg" alt="me">
+    <main>
+        <!-- Background Video Section -->
+        <div class="background">
+            <video autoplay loop muted playsinline class="background-video">
+                <source src="background-wuwa.mp4" type="video/mp4">
+            </video>
+            <div class="fade-overlay"></div> <!-- Fading effect overlay on video -->
         </div>
         
-        <!-- Description Section -->
-        <div class="description">
-            <link href='https://fonts.googleapis.com/css?family=Kdam Thmor Pro' rel='stylesheet'>
-            <h1>I'm a work in progress, please be patient.</h1>
-            <p>- 01001101</p>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="logo-container">
+                <img src="wuwa-logo.png" alt="Logo" class="logo">
+                <div class="name">Mark Louie Matus</div>
+            </div>
+            <ul>
+                <li><p onclick="location.reload()">Home</p></li>
+                <li><a href="javascript:void(0);" onclick="openModal()"><p>About</p></a></li>
+                <li><a href="https://github.com/zayddtrevor/matus_myportfolioIT307" target="_blank"><p>Portfolio</p></a></li>
+                <li><p>Contact</p></li>
+                <li><p>PRELIM</p></li>
+            </ul>
+        </nav>
+        
+        <!-- Main Content Container -->
+        <div class="container">
+            <img src="rinascita-logo.jpg" alt="Rinascita Logo" class="rinascita-logo">
             
-            <!-- Action Buttons -->
-            <div class="buttons">
-                <button class="accept">Accept</button>
-                <button class="decline">Decline</button>
+            <!-- Profile Image Section -->
+            <div class="character">
+                <img src="me.jpg" alt="me">
             </div>
             
-            <!-- Binary Text Section -->
-            <div>
-                <h2 class="description-h2">01110100 01101000 01100101 00100000 01100111 01100001 01101101 01100101</h2>
+            <!-- Description Section -->
+            <div class="description">
+                <link href='https://fonts.googleapis.com/css?family=Kdam Thmor Pro' rel='stylesheet'>
+                <h1>I'm a work in progress, please be patient.</h1>
+                <p>- 01001101</p>
+                
+                <!-- Action Buttons -->
+                <div class="buttons">
+                    <button class="accept">Accept</button>
+                    <button class="decline">Decline</button>
+                </div>
+                
+                <!-- Binary Text Section -->
+                <div>
+                    <h2 class="description-h2">01110100 01101000 01100101 00100000 01100111 01100001 01101101 01100101</h2>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Rinascita Landscape Section -->
-    <img src="rinascita-landscape.jpg" alt="Rinascita Landscape" class="black-section-image">
-    
-    <!-- About Me Section -->
-    <div class="rectangle" id="about-me">
-        <h2 class="rectangle-title">About Me</h2>
-        <p class="rectangle-text">
-            My name is Mark Louie Matus. I'm currently a third-year BSIT student at World Citi Colleges.
-            I'd describe myself as a fast learner and someone who gets along well with others.
-            When I'm not studying, you can usually find me playing games or catching up on the latest anime.
-        </p>
-    </div>
-    
-    <!-- Black Section for Styling Purpose -->
-    <div class="black-section">
-        <div class="fade-overlay-2"></div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="contact-section">
-        <div class="fade-overlay-2"></div>
-        <h2 class="contact-title">Contact Me</h2>
-        <p class="contact-text">Feel free to reach out via email or social media.</p>
-        <div class="contact-links">
-            <a href="mailto:azacnyzero@gmail.com">Email</a>
-            <a href="https://github.com/zayddtrevor" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/mark-louie-matus/" target="_blank">LinkedIn</a>
+        
+        <!-- Rinascita Landscape Section <img src="rinascita-landscape.jpg" alt="Rinascita Landscape" class="black-section-image">-->
+        
+        <!-- About Me Section -->
+        <div id="aboutModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>About Me</h2>
+                <p>My name is Mark Louie Matus. I'm currently a third-year BSIT student at World Citi Colleges.</p>
+                <p>I'd describe myself as a fast learner and someone who gets along well with others.</p>
+                <p>When I'm not studying, you can usually find me playing games or catching up on the latest anime.</p>
+            </div>
         </div>
-    </div>
-
 
     <!-- Scroll Animation Script -->
     <script>
