@@ -74,25 +74,21 @@
 }
 
 /* ========== ABOUT ME ========== */
-@keyframes aboutMeRight {
-    from {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.hidden {
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-@keyframes aboutMeRightReverse {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
+.left {
+    transform: translateX(-100px);
 }
 
+.right {
+    transform: translateX(100px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}

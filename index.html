@@ -49,7 +49,7 @@
             </div>
             <ul>
                 <li><p onclick="location.reload()">Home</p></li>
-                <li><a href="javascript:void(0);" onclick="openModal()"><p>About Me</p></a></li>
+                <li><a href="#aboutMeTitle"><p>About Me</p></a></li>
                 <li><a href="https://github.com/zayddtrevor/matus_myportfolioIT307" target="_blank"><p>Portfolio</p></a></li>
                 <li><a href="#footer"><p>Contact</p></a></li>
                 <li><p>PRELIM</p></li>
@@ -60,7 +60,7 @@
 
         <!-- Main Content Container -->
         <div class="container">
-            <img src="rinascita-logo.jpg" alt="Rinascita Logo" class="rinascita-logo">
+            <img src="yangyang-sticker.webp" alt="Yang Yang sticker" class="yangyang-sticker">
             
             <!-- Profile Image Section -->
             <div class="character">
@@ -87,13 +87,17 @@
         </div>
         
         <!-- About Me Section -->
-        <div id="aboutModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>About Me</h2>
-                <p>My name is Mark Louie Matus. I'm currently a third-year BSIT student at World Citi Colleges.</p>
-                <p>I'd describe myself as a fast learner and someone who gets along well with others.</p>
-                <p>When I'm not studying, you can usually find me playing games or catching up on the latest anime.</p>
+        <div class="about-me-container hidden">
+            <div class="about-me-image-section hidden left">
+                <img src="rinascita-landscape.jpg" alt="Rinascita Landscape">
+            </div>
+            <div id="aboutMe" class="about-me-section hidden right">
+                <div class="about-me-content">
+                    <h2 id="aboutMeTitle">About Me</h2>
+                    <p>My name is Mark Louie Matus. I'm currently a third-year BSIT student at World Citi Colleges.</p>
+                    <p>I'd describe myself as a fast learner and someone who gets along well with others.</p>
+                    <p>When I'm not studying, you can usually find me playing games or catching up on the latest anime.</p>
+                </div>
             </div>
         </div>
 
@@ -122,38 +126,31 @@
                 </ul>
             </div>
         </div>
+        
         <div class="footerBottom">
             <p>Designed by <span class="designer">Mark Louie Matus</span></p>
-        </div>
+        </div> 
     </footer>
 
-    <!-- Scroll Animation Script -->
     <script>
-        window.addEventListener('scroll', function () {
-            const image = document.querySelector('.black-section-image');
-            const rectangle = document.querySelector('.rectangle');
-    
-            if (!image || !rectangle) return;
-    
-            const imagePosition = image.getBoundingClientRect().top;
-            const rectanglePosition = rectangle.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-    
-            if (imagePosition < windowHeight && imagePosition > 0) {
-                image.classList.add('show-image');
-                image.classList.remove('hide-image');
-            } else {
-                image.classList.add('hide-image');
-                image.classList.remove('show-image');
+        document.addEventListener("DOMContentLoaded", function () {
+            const aboutMeSection = document.querySelectorAll(".hidden");
+
+            function revealOnScroll() {
+                aboutMeSection.forEach((element) => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (elementTop < windowHeight * 0.7) {
+                        element.classList.add("show");
+                    } else {
+                        element.classList.remove("show");
+                    }
+                });
             }
-    
-            if (rectanglePosition < windowHeight && rectanglePosition > 0) {
-                rectangle.classList.add('show-rectangle');
-                rectangle.classList.remove('hide-rectangle');
-            } else {
-                rectangle.classList.add('hide-rectangle');
-                rectangle.classList.remove('show-rectangle');
-            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // Run once to check if elements are already in view
         });
     </script>
 </body>
