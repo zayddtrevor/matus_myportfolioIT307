@@ -10,7 +10,7 @@ body, ul {
 
 /* ========== NAVIGATION BAR ========== */
 nav {
-    position: fixed; /* Sticks to the top while scrolling */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -22,10 +22,9 @@ nav {
     width: 100%;
 }
 
-/* Mobile Optimization */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* Stack items on small screens */
+        flex-direction: column;
         padding: 10px;
     }
 }
@@ -42,42 +41,41 @@ nav {
     animation: slide 2s ease-in-out forwards;
 }
 
-/* Default logo size */
 .logo {
     width: 80px;
     height: auto;
 }
 
-/* Default text size */
 .name {
     font-family: 'Big Shoulders Text', sans-serif;
     font-size: 20px;
     color: white;
 }
 
-/* Adjust for tablets and smaller screens */
 @media (max-width: 768px) {
     .logo {
-        width: 60px; /* Smaller logo */
+        width: 60px; 
+        margin-top: 10px;
     }
 
     .name {
-        font-size: 16px; /* Smaller text */
+        font-size: 16px;
+        margin-top: 10px;
     }
 }
 
-/* Further adjust for Mobile L (425px) and smaller */
 @media (max-width: 425px) {
     .logo {
-        width: 50px; /* Even smaller logo */
+        width: 50px;
+        margin-top: 10px;
     }
 
     .name {
-        font-size: 14px; /* Even smaller text */
+        font-size: 14px;
+        margin-top: 10px;
     }
 }
 
-/* Smooth animation */
 @keyframes slide {
     from {
         opacity: 0;
@@ -100,6 +98,61 @@ nav {
     z-index: 2;
 }
 
+/* Tablets (Medium Screens) */
+@media screen and (max-width: 1024px) {
+    .rinascita-logo {
+        left: 9%;
+        top: 15%;
+        width: 80px;
+    }
+}
+
+/* Smartphones (Small Screens) */
+@media screen and (max-width: 768px) {
+    .rinascita-logo {
+        left: 7%;
+        top: 14%;
+        width: 70px;
+    }
+}
+
+/* Extra Small Devices (Very Small Screens) */
+@media screen and (max-width: 480px) {
+    .rinascita-logo {
+        left: 5%;
+        top: 12%;
+        width: 60px;
+    }
+}
+
+/* Tablets (Medium Screens) */
+@media screen and (max-width: 1024px) {
+    .rinascita-logo {
+        left: 10%;
+    }
+}
+
+/* Smartphones (Small Screens) */
+@media screen and (max-width: 768px) {
+    .rinascita-logo {
+        left: 5%;
+    }
+}
+
+/* Extra Small Devices (Very Small Screens) */
+@media screen and (max-width: 480px) {
+    .rinascita-logo {
+        left: 3%;
+    }
+}
+
+/* Ultra Small Devices (320px and below) */
+@media screen and (max-width: 320px) {
+    .rinascita-logo {
+        left: 2%;
+    }
+}
+
 /* ========== NAVIGATION LINKS ========== */
 nav ul {
     list-style: none;
@@ -110,7 +163,6 @@ nav ul {
     margin-left: auto;
 }
 
-/* Navigation links */
 nav ul li a {
     text-decoration: none;
     color: inherit;
@@ -127,13 +179,13 @@ nav ul li p {
     font-family: 'Big Shoulders Text';
     font-size: 20px;
     top: 15px;
-    padding: 5px 15px;
+    right: 40px;
+    padding: 5px 20px;
     cursor: pointer;
     position: relative;
     z-index: 3;
 }
 
-/* Button-style for the last navigation item */
 nav ul li:last-child p {
     padding: 5px 10px;
     border-radius: 8px;
@@ -141,7 +193,6 @@ nav ul li:last-child p {
     top: 13.5px;
 }
 
-/* Animation */
 nav ul li p {
     opacity: 0;
     transform: translateY(-10px);
@@ -162,59 +213,48 @@ nav ul li p {
 /* ========== NAV LINK MOBILE RESPONSIVENESS ========== */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack links vertically */
+        flex-direction: column; 
         align-items: center;
-        gap: 2px; /* Reduce spacing between items */
+        gap: 2px; 
         position: absolute;
-        top: 50px; /* Move the whole menu higher */
-        right: 10px; /* Move the whole menu slightly to the right */
-        background: rgba(72, 72, 72, 0.6); /* Semi-transparent background */
+        top: 70px;
+        right: 10px;
+        background: rgba(86, 86, 86, 0.6);
         padding: 10px 20px;
         border-radius: 10px;
     }
 
-    nav ul li p {
-        font-size: 14px; /* Keep the same size */
-        padding: 5px 12px; /* Reduce padding */
-        margin: 2px 0 1px 0; /* Move text slightly up */
-        position: relative;
-        left: -5px; /* Move text slightly to the right */
-    }
-
+    nav ul li p,
     nav ul li:last-child p {
-        padding: 5px 12px;
-        font-size: 14px; /* Keep the same size */
-        margin: 2px 0 1px 0; /* Move text slightly up */
-        left: -5px; /* Move text slightly to the right */
+        font-size: 16px; 
+        padding: 5px 12px; 
+        margin-top: -10px; 
+        margin-bottom: 12px; 
+        position: relative;
+        left: -10px; 
     }
 }
 
-/* Mobile L (425px) and smaller */
 @media (max-width: 425px) {
     nav ul {
-        right: 10px; /* Move menu slightly to the right */
-        top: 50px; /* Move menu higher */
+        right: 10px; 
+        top: 50px; 
         padding: 8px 15px;
     }
 
-    nav ul li p {
-        font-size: 14px; /* Keep the same size */
-        padding: 5px 10px; /* Reduce padding */
-        margin: 2px 0 1px 0; /* Move text slightly up */
-        left: -5px; /* Move text slightly to the right */
-    }
-
+    nav ul li p,
     nav ul li:last-child p {
-        font-size: 12px; /* Keep the same size */
-        padding: 5px 10px;
-        margin: 2px 0 1px 0; /* Move text slightly up */
-        left: -5px; /* Move text slightly to the right */
+        font-size: 14px; 
+        padding: 5px 10px; 
+        margin-top: -10px; 
+        margin-bottom: 12px; 
+        left: -10px; 
     }
 }
 
 /* ========== BACKGROUND STYLES ========== */
 .background {
-    position: fixed; /* Keeps it in place */
+    position: fixed; 
     width: 100%;
     height: 100vh;
     top: 0;
@@ -235,12 +275,11 @@ nav ul li p {
     min-height: 100%;
 }
 
-/* Ensuring proper scaling on Mobile L (425px) and similar */
 @media (max-width: 425px) {
     .background-video {
-        width: 110vw; /* Slightly larger to prevent black bars */
+        width: 110vw; 
         height: 110vh;
-        left: 40%;
+        left: 50%;
         right: 50%;
     }
 }
@@ -254,6 +293,18 @@ nav ul li p {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     pointer-events: none;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .fade-overlay-2 {
+        height: 80px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .fade-overlay-2 {
+        height: 60px; 
+    }
 }
 
 /* ========== MAIN CONTAINER ========== */
@@ -368,6 +419,70 @@ nav ul li p {
     100% {
         border-color: #000000A6;
         box-shadow: 0 0 10px #000000A6;
+    }
+}
+
+/* Tablets (Medium Screens) */
+@media screen and (max-width: 1024px) {
+    .character {
+        left: 10%;
+        width: 25vw;
+    }
+
+    .character img {
+        border-radius: 50px;
+        border-width: 4px;
+        position: absolute;
+        margin-left: 10px;
+        margin-top: -450px;
+    }
+}
+
+/* Smartphones (Small Screens) */
+@media screen and (max-width: 768px) {
+    .character {
+        left: 5%;
+        width: 30vw;
+    }
+    
+    .character img {
+        border-radius: 40px;
+        border-width: 4px;
+        position: absolute;
+        margin-left: 15px;
+        margin-top: -400px;
+    }
+}
+
+/* Extra Small Devices (Very Small Screens) */
+@media screen and (max-width: 480px) {
+    .character {
+        left: 3%;
+        width: 40vw;
+    }
+    
+    .character img {
+        border-radius: 30px;
+        border-width: 3px;
+        position: absolute;
+        margin-left: 15px;
+        margin-top: -320px;
+    }
+}
+
+/* Ultra Small Devices (320px and below) */
+@media screen and (max-width: 320px) {
+    .character {
+        left: 2%;
+        width: 45vw;
+    }
+    
+    .character img {
+        border-radius: 25px;
+        border-width: 2px;
+        position: absolute;
+        margin-left: 15px;
+        margin-top: -380px;
     }
 }
 
