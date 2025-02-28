@@ -47,7 +47,7 @@ nav {
 }
 
 .name {
-    font-family: 'Big Shoulders Text', sans-serif;
+    font-family: 'Big Shoulders Text';
     font-size: 20px;
     color: white;
 }
@@ -179,7 +179,7 @@ nav ul li p {
     font-family: 'Big Shoulders Text';
     font-size: 20px;
     top: 15px;
-    right: 40px;
+    right: 60px;
     padding: 5px 20px;
     cursor: pointer;
     position: relative;
