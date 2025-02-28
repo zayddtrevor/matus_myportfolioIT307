@@ -13,8 +13,6 @@
     <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
 </head>
 
-    </script>
-
 <body>
     <main>
         <!-- Background Video Section -->
@@ -63,9 +61,13 @@
                 </div>
 
                 <div class="popup">
-                    <p>Come back later to check out my achievements!</p>
+                    <div class="popup-content">
+                        <img src="mrover-sticker.png" class="sticker" alt="Mrover Sticker">
+                        <p>Come back later to check out my achievements!</p>
+                    </div>
                     <button class="ok-btn">Okay</button>
                 </div>
+                
             </div>
         </div>
         
@@ -105,15 +107,24 @@
             </div>
             <div class="footerNav">
                 <ul>
-                    <li><a href="">Contact Me</a></li>
+                    <li><a href="#" class="contact-trigger">Contact Me</a></li>
                 </ul>
             </div>
+            
+            <!-- Contact Info Popup -->
         </div>
         
         <div class="footerBottom">
             <p>Designed by <span class="designer">Mark Louie Matus</span></p>
         </div> 
     </footer>
+    
+    <div class="contact-popup">
+        <div class="popup-content">
+            <img src="Contact-info.png" alt="Contact Information">
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
 
     <!-- Script for Resume Button -->
     <script>
@@ -151,8 +162,45 @@
             }
 
             window.addEventListener("scroll", revealOnScroll);
-            revealOnScroll(); // Run once to check if elements are already in view
+            revealOnScroll();
         });
     </script>
+
+    <script>
+        function showAchievementsPopup() {
+            let popup = document.querySelector(".popup");
+            popup.style.display = "block";
+            setTimeout(() => popup.classList.add("show"), 10); // Smooth fade-in
+        }
+
+        function hideAchievementsPopup() {
+            let popup = document.querySelector(".popup");
+            popup.classList.remove("show");
+            setTimeout(() => popup.style.display = "none", 400); // Smooth fade-out after transition
+        }
+
+        // Show popup when "Achievements" button is clicked
+        document.querySelector(".Achievements").addEventListener("click", function () {
+            showAchievementsPopup();
+        });
+
+        // Hide popup when "Okay" button is clicked
+        document.querySelector(".popup .ok-btn").addEventListener("click", function () {
+            hideAchievementsPopup();
+        });
+    </script>
+
+
+    <script>
+        document.querySelector(".contact-trigger").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.querySelector(".contact-popup").style.display = "block";
+        });
+
+        document.querySelector(".close-btn").addEventListener("click", function () {
+            document.querySelector(".contact-popup").style.display = "none";
+        });
+    </script>
+
 </body>
 </html>

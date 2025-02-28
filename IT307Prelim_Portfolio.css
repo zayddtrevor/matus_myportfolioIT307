@@ -253,7 +253,6 @@ nav ul li p {
     color: #000000;
 }
 
-/* Pop-up container */
 .popup {
     display: none;
     position: fixed;
@@ -268,21 +267,26 @@ nav ul li p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Pop-up header */
-.popup h2 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Pop-up text */
+.sticker {
+    width: 80px;
+    height: auto;
+}
+
 .popup p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    text-align: left;
 }
 
-/* 'Okay' button */
 .popup .ok-btn {
     background: #004aad;
     color: white;
@@ -292,6 +296,7 @@ nav ul li p {
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 10px;
 }
 
 .popup .ok-btn:hover {
@@ -432,3 +437,49 @@ footer {
     margin: 0px 5px;
 }
 
+/* ========== CONTACT ME ========== */
+.contact-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+}
+
+.contact-popup img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-popup .close-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #930000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-popup .close-btn:hover {
+    background: #dc4343;
+}
+
+.contact-popup::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
