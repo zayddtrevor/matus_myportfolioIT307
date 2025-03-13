@@ -1,0 +1,181 @@
+/* === Reset default margins and paddings for all elements === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Body styling === */
+body {
+    background-color: #9b6a6c;
+    color: #fff3e6;
+    font-family: "Sniglet";
+    min-height: 100vh;
+}
+
+/* === Header styling === */
+header {
+    font-size: 1.5rem;
+}
+
+/* === Centering header and form elements === */
+header, 
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === Input field and button styles === */
+form input, 
+form button {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    border: none;
+    background: #f8e0b6;
+    border-radius: 2rem;
+}
+
+/* === Button styling === */
+form button {
+    color: #9b6a6c;
+    background: #f8e0b6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+/* === Button hover effect === */
+form button:hover {
+    color: white;
+    background: #e28743;
+}
+
+/* === Plus icon positioning === */
+.fa-plus-circle {
+    margin-top: 0.3rem;
+    margin-left: -8px;
+}
+
+/* === To-Do List Container styling === */
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === To-Do List structure === */
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+/* === Individual To-Do item styling === */
+.todo {
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    background: #f8e0b6;
+    color: #3d2c2e;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2rem;
+}
+
+/* === Ensuring To-Do list item text takes full space === */
+.todo li {
+    flex: 1;
+}
+
+/* === Buttons inside To-Do items === */
+.trash-btn, 
+.complete-btn {
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* === Complete button style === */
+.complete-btn {
+    background: #e28743;
+}
+
+/* === Trash button style === */
+.trash-btn {
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    background: #a46b6f;
+}
+
+/* === To-Do item text styling === */
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+/* === Disable pointer events for icons inside buttons === */
+.fa-trash, 
+.fa-check-circle {
+    pointer-events: none;
+}
+
+/* === Style for completed tasks === */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* === Animation for item deletion === */
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+/* === Dropdown customization === */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+/* === Styling for dropdown container === */
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+/* === Dropdown select styling === */
+select {
+    color:#e28743;
+    width: 10rem;
+    height: 3.2rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+/* === Custom dropdown arrow === */
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background:#e28743;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* === Hover effect for dropdown arrow === */
+.select:hover::after {
+    background: white;
+    color: #e28743;
+}
